@@ -1,6 +1,13 @@
 #include <stdio.h> 
 #include <string.h>
 
+//See https://www.coderbyte.com/editor/guest:Eight%20Queens:C
+//for a full description of the coding puzzle
+
+//Given a string array of coordinates depicting the location of eight queens on a chessboard, return true
+//if none of the queens can attack each other. If a queen can attack another, return the coordinate of
+//the first attacking queen listed in the array.
+
 void EightQueens(char * strArr[]) { 
 int size = 8, charToInt = -48;
 	int rows[size];
@@ -9,7 +16,6 @@ int size = 8, charToInt = -48;
 	for(int queen = 0; queen < size; queen++) {
 		rows[queen] = *(strArr[queen] + 1) + charToInt;
 		cols[queen] = *(strArr[queen] + 3) + charToInt;
-		//printf("row[%d] = %d, col[%d] = %d\n", queen, rows[queen], queen, cols[queen]);
 	}
 	
 	for(int i = 0; i < size; i++) {
@@ -40,7 +46,6 @@ int size = 8, charToInt = -48;
 
 int main(void) { 
    
-  // keep this function call here
   /* Note: In C you first have to initialize an array and set 
      it equal to the stdin to test your code with arrays. */
      
